@@ -2,17 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="preload" as="image" href="/src/assets/qelos_small.webp" fetchpriority="high">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=YourFont:wght@400;600&display=swap">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="format-detection" content="telephone=no">
     <meta name="mobile-web-app-capable" content="yes">
-    <script>window.process={env:{NODE_ENV:'development'}}</script>
     <!--HEAD-->
   </head>
   <body>
+    <img
+      id="splash-logo"
+      alt="QELOS"
+      src="/src/assets/qelos_small.webp"
+      fetchpriority="high"
+      width="500"
+      height="200"
+      decoding="async"
+      style="
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: opacity 0.5s ease;
+        opacity: 0.01;
+        z-index: 9999;
+      "
+    />
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
+    <script>
+      window.process = { env: { NODE_ENV: 'development' } };
+    </script>
     <!--BODY-->
   </body>
 </html>

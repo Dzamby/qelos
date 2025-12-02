@@ -12,10 +12,20 @@
       </LoginForm>
     </div>
     <template v-else>
-      <aside :class="{'bg-image': !!bgImage}">
-        <img :alt="appConfig?.name || 'SaaS'" :src="appConfig?.logoUrl || '../../assets/logo.png'">
-        <h1>{{ $t(config?.loginTitle || 'Welcome') }}</h1>
+      <aside :class="{'bg-image': !!bgImage}" class="aside-centered">
+        <div class="logo-wrapper">
+          <img
+            alt="App logo"
+            src="@/assets/qelos_small.webp"
+            width="500"
+            height="200"
+            decoding="async"
+            loading="eager"
+          />
+          <h1>{{ $t(config?.loginTitle || 'Welcome') }}</h1>
+        </div>
       </aside>
+
       <div>
         <LoginForm :auth-config="config">
           <template #header v-if="config.slots?.loginHeader">
@@ -150,11 +160,31 @@ aside {
   width: 100%;
 }
 
-img {
-  max-width: 400px;
-  width: 80%;
-  padding: 30px;
+.aside-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
+
+.logo-wrapper {
+  min-height: 300px;
+}
+
+
+.logo-wrapper img {
+  width: 250px;
+  height: auto;
+  max-width: 60%;
+  margin-bottom: 20px;
+}
+
+.logo-wrapper h1 {
+  color: var(--text-color, #fff);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
 
 .bg-image {
   background: v-bind(bgImage) no-repeat center;

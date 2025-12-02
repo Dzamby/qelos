@@ -1,0 +1,6 @@
+{
+  "name": "Broken JSON",
+  "description": "This manifest is intentionally malformed",
+  "appUrl": "http://localhost:3001/",
+  "apiPath": "broken-json",
+  "manifestUrl": "/malformed-manifest.json"

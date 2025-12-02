@@ -20,6 +20,15 @@ declare module '@vue/runtime-core' {
   }
 }
 const app = createApp(App)
+window.addEventListener('load', () => {
+  const splash = document.getElementById('splash-logo');
+  if (splash) {
+    splash.style.opacity = '0';
+    setTimeout(() => splash.remove(), 1);
+  }
+});
+
+
 app.use(createPinia())
 app.use(router)
 app.use(i18n)

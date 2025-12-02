@@ -1,0 +1,6 @@
+{
+  "description": "Missing name field on purpose",
+  "appUrl": "http://localhost:3001/",
+  "apiPath": "partial-plugin",
+  "manifestUrl": "/partial-manifest.json"
+}

@@ -1,0 +1,37 @@
+
+ RUN  v3.2.4 /home/matej/ess/issue/qelos/apps/admin
+      Coverage enabled with v8
+
+ ✓ src/modules/core/utils/tests/coverage-check.test.ts (1 test) 3ms
+ ✓ src/modules/core/utils/tests/clear-nulls.test.ts (6 tests) 5ms
+ ✓ src/i18n/i18n.test.ts (5 tests) 7ms
+ ✓ src/plugins/tests/element.test.ts (4 tests) 38ms
+stdout | src/modules/core/utils/tests/unused-imports.test.ts > Unused Imports Check > Summary Statistics > should provide unused imports summary
+
+📊 Unused Imports Summary:
+   Total Vue files: 206
+   Files with unused imports: 5
+   Total unused imports: 6
+
+📋 Files needing cleanup:
+   modules/core/components/forms/FormInput.vue: 1 unused imports
+   modules/no-code/components/blueprint-form/BlueprintEventsTab.vue: 1 unused imports
+   modules/plugins/components/PluginForm.vue: 1 unused imports
+   modules/plugins/components/plugin-form/BasicInfoTab.vue: 1 unused imports
+   modules/pre-designed/components/VChart.vue: 2 unused imports
+
+ ✓ src/modules/core/utils/tests/unused-imports.test.ts (214 tests) 264ms
+
+ Test Files  5 passed (5)
+      Tests  230 passed (230)
+   Start at  15:15:13
+   Duration  5.41s (transform 231ms, setup 0ms, collect 323ms, tests 316ms, environment 3.64s, prepare 589ms)
+
+ % Coverage report from v8
+
+=============================== Coverage summary ===============================
+Statements   : 0.04% ( 20/41777 )
+Branches     : 27.21% ( 89/327 )
+Functions    : 26.08% ( 84/322 )
+Lines        : 0.04% ( 20/41777 )
+================================================================================

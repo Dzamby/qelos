@@ -1,0 +1,7 @@
+{
+  "name": "Demo Plugin",
+  "description": "Just a demo plugin",
+  "appUrl": "http://localhost:3001/",
+  "apiPath": "demo-plugin",
+  "manifestUrl": "/example-plugin-manifest.json"
+}
